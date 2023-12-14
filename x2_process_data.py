@@ -2,8 +2,8 @@
 import pandas as pd
 import numpy as np
 
-defaultTest = pd.read_csv("test.csv")                # Importing the dataframe 'test.csv' from the appropriate folder
-defaultTrain = pd.read_csv("train.csv")              # Importing the dataframe 'train.csv' from the appropriate folder
+defaultTest = pd.read_csv("data/test.csv")                # Importing the dataframe 'test.csv' from the appropriate folder
+defaultTrain = pd.read_csv("data/train.csv")              # Importing the dataframe 'train.csv' from the appropriate folder
 fulldf = pd.concat([defaultTest, defaultTrain])      # Merging  the 2 datasets, so that we can work as if we were given the undivided
 
 #dataset in the first place.

@@ -15,9 +15,16 @@ jobs:
       #   with:
       #     python-version: '3.x'
       - uses: iterative/setup-cml@v1
-      - name: Train model
+      - name: Train model within Docker
         run: |
           # Your ML workflow goes here
-          pip install -r requirements.txt
-          python x2_process_data.py
-          python x3_train.py
+          sudo apt-get update
+          sudo apt-get install -y docker.io
+          sudo usermod -aG docker $USER
+          newgrp docker
+
+      - name: Build Docker Image
+        run: docker build -t ml_pipeline .
+        
+      - name: Run Docker Container
+        run: docker run -it ml_pipeline

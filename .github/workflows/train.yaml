@@ -27,4 +27,4 @@ jobs:
         run: docker build -t ml_pipeline .
         
       - name: Run Docker Container
-        run: docker run -it ml_pipeline
+        run: docker run ml_pipeline

@@ -8,6 +8,6 @@ ADD . /app
 
 # Install the dependencies
 RUN pip install -r requirements.txt
-
+# Run
 CMD ["python", "scripts/x2_process_data.py" ,"&&", "python", "scripts/x3_train.py" ]
 

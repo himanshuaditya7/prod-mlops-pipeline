@@ -39,6 +39,7 @@ dummyModel.fit(X_train, y_train)
 predictionsDummy = dummyModel.predict(X_test)
 
 accuracyDummy = metrics.accuracy_score(y_test, predictionsDummy)       # One of the results
+print(accuracy_dummy)
 
 
 # ::: Apply KNN
